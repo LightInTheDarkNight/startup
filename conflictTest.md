@@ -4,4 +4,4 @@ Placed in my IDE
 
 Placed in Github
 
-Conflict resolution IDE Comment
+Conflict resolution IDE and GitHub Comments
