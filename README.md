@@ -1,6 +1,7 @@
 # Startup
 CS 260 Internet startup
-[Notes](notes.md)
+
+[Class Notes](notes.md)
 
 ## Specifications
 
