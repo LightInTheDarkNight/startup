@@ -21,3 +21,9 @@
         - e.g. Here is the link to the [ReadMe](README.md) file
 - images:
   - ![Alt Text](image link - this one doesn't work)
+
+
+## Server Details
+- IP 100.24.112.206
+- Connect: http://100.24.112.206/
+- SSH ssh -i [key pair file] ubuntu@100.24.112.206
