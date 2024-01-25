@@ -26,4 +26,5 @@
 ## Server Details
 - IP 100.24.112.206
 - Connect: http://100.24.112.206/
+  - http://delversdomain.click/
 - SSH ssh -i [key pair file] ubuntu@100.24.112.206
