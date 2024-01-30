@@ -1,7 +1,7 @@
 # Startup
 CS 260 Internet startup
 
-[Class Notes](notes.md)
+[Class Notes](/Startup/notes.md)
 
 ## Specifications
 
@@ -28,6 +28,6 @@ The database will store highscores for individual players, as well as characters
 Data from the server rendered on the user's screen will include realtime chat data, scoring data, friends' statistics and scores, how many players are playing with you or watchin gyou play, and so forth.
 
 #### Concept Art/Wireframes
-![Main Page (not logged in)](/ConceptArt/MainPageLoggedOut.png)
-![Friends Page](/ConceptArt/FriendsPage.png)
-![Profile Page](/ConceptArt/ProfilePage.png)
+![Main Page (not logged in)](/Startup/ConceptArt/MainPageLoggedOut.png)
+![Friends Page](/Startup/ConceptArt/FriendsPage.png)
+![Profile Page](/Startup/ConceptArt/ProfilePage.png)
