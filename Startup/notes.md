@@ -28,3 +28,10 @@
 - Connect: http://100.24.112.206/
   - http://delversdomain.click/
 - SSH ssh -i [key pair file] ubuntu@100.24.112.206
+
+## HTML Notes
+- &lt;div&gt; creates a block of text; it is not an inline element or a meaningless one.
+  - &lt;p&gt; and &lt;h#&gt; tags, for Paragraphs and headings, are also block creators
+- &lt;span&gt; creates an inline division of the text, so something can be coded in the background as a name or as a reference without breaking the flow of the text for the viewer
+  - &lt;a&gt; and &lt;b&gt; tags, for links and emphasis, are also inline
+- The ID attribute of an element can be used as a link by using &lt;a href = "#&lt;id name here&gt;"&gt;
