@@ -24,7 +24,32 @@
         </header>
 
         <main>
-
+            <form method="get" action="play.html">
+                <label for="jCode">Join a Game:<br></label>
+                <input type="text" id="jCode" placeholder="Join Code" required/> 
+                <button type="submit">Go</button>
+            </form><br>
+            <form method="get" action="play.html">
+                <label for="wCode">Watch a Game:<br></label>
+                <input type="text" id="wCode" placeholder="Watch Code" required/> 
+                <button type="submit">Go</button>
+            </form><br>
+            Or Start a new game:<br>
+            <form method="get" action="play.html">
+                <label for="difficulty">Difficulty:<br></label>
+                <input id = "difficulty" type = "range" min = 1 max = 10><br>
+                <fieldset>
+                    <legend>Character</legend>
+                    <label for="char1">Swordsman</label>
+                    <input id="char1" type = "radio" name="character" Value="swordsman" checked>
+                    <label for="char2">Cloak and Dagger</label>
+                    <input id="char2" type = "radio" name="character" Value="cloak">
+                    <label for="char3">Mage</label>
+                    <input id="char3" type = "radio" name="character" Value="mage">
+                </fieldset>
+                <button type="submit">Play!</button>
+            </form>
+            <button><img src="Assets/gateOption.jpeg"></button>
         </main>
 
         <footer>
