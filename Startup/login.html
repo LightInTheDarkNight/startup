@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Delver's Domain</title>
+        <link rel="icon" href="Assets/DelversIcon.ico" />
+    </head>
+    <Body>
+        
+        <header>
+            <a href = "index.html"><img src = "Assets/Banner_Option_Preview.jpeg" alt = "Castle doors" width = "100%" height = "50"></a>
+            <h1>Delvers Domain</h1>
+            <nav>
+                <table width = "100%">
+                    <tr>
+                        <th><a href = "index.html">Home</a></th>
+                        <th><a href = "play.html">Play</a></th>
+                        <th><a href = "leaderboards.html">Leaderboards</a></th>
+                        <th><a href = "login.html">Login</a></th>
+                        <th><a href = "account.html">Account</a></th>
+                        <th><a href = "friends.html">Friends</a></th>
+                    </tr>
+                </table>
+            </nav>
+        </header>
+
+        <main>
+            <h2>Public:</h2>
+            Name: Mystery Player! <br>
+            Watch code: 237984793950 <br>
+            Friends: none :( Followers: only the wumpus :( <br>
+            Rank: &lt;CurrentSessionRank&gt;<br>
+            Highscore: &lt;CurrentSessionHighscore&gt;<br>
+
+            <h2>
+                Login to manage your account details and sink your progress to an existing account!
+            </h2>
+            <form method="get" action="account.html">
+                <label for="user">Username or email:</label>
+                <input type="text" id="user" placeholder="Username or email" required/><br>
+                <label for="Password">Password:</label>
+                <input type="password" id="Password" placeholder="Enter your password" required/><br>
+                <button type="submit">Login</button>
+            </form>
+            <h2>
+                Or sign up for a new Account!
+            </h2>
+            <form method="get" action="account.html">
+                <label for="user">Email Address:</label>
+                <input type="text" id="user" placeholder="somebody.cares@domain.com" required/><br>
+                <label for="crePassword">Create a Password:</label>
+                <input type="password" id="crePassword" placeholder="Enter a password" required/><br>
+                <label for="ConfPassword">Confirm your password:</label>
+                <input type="password" id="confPassword" placeholder="Confirm your password" required/><br>
+                <button type="submit">Create Account</button>
+            </form>
+        </main>
+
+        <footer>
+            <p><a href = "https://github.com/LightInTheDarkNight/startup.git">Github Repository</a></p>
+            <p>Created by AJ Boyd, a Consumate Nerd and Honorary Genius (because he's not smart enough).</p>
+        </footer>
+
+    </Body>
+</html>
