@@ -3,6 +3,17 @@ CS 260 Internet startup
 
 [Class Notes](notes.md)
 
+## HTML Deliverable
+Changes:
+ - framework of pages created representing the final functionality of the app, including home, play, friends, chat, login, leaderboard, and account info pages
+   - Including the tags Body, Nav, Main, Header, and footer on each page
+ - Links to each page from the home page (chat isn't in the navigation, only in the body of the main page and linked from the "Friends" page)
+ - Standin text and images for the eventual project features, including a picture as a button to stand in for the game, input fields for options to join or watch another game, login placeholders, mimic chat structure, and more
+ - Login page includes a placeholder login form, and submitting it takes you to the account page, including a placeholder user name display
+ - Database placeholder on the leaderboard page
+ - Websocket placeholder on the chat page
+ - 3rd part service placeholder on the login page (SSO option)
+
 ## Specifications
 
 ### Pitch
