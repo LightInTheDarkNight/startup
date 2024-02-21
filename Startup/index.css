@@ -9,16 +9,24 @@ body{
 header {
     box-shadow: 0 0 .3rem .2rem black;
 }
-.navbar-brand{
-    text-shadow: 1px 0 black 0 1px black -1px 0 black 0 -1px black;
+.text-darken-bg{
+    text-shadow: 1px 0px 5px black;
 }
 main{
     width:75%;
+    height:100%;
     box-shadow: .25rem 0 .5rem black;
 }
 #main-container{
     flex:1;
     box-shadow: 0 .25rem .5rem black inset;
+}
+.col{
+    padding: 8px;
+}
+.row{
+    margin-left: -8px;
+    margin-right: -8px;
 }
 footer {
     box-shadow: 0 0 .3rem .2rem black
@@ -40,4 +48,5 @@ footer {
     .navbar-brand{
         text-align: center;
     }
+    
 }
