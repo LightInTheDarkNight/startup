@@ -5,16 +5,39 @@ body{
     display:flex;
     flex-direction: column;
 }
+
+header {
+    box-shadow: 0 0 .3rem .2rem black;
+}
+.navbar-brand{
+    text-shadow: 1px 0 black 0 1px black -1px 0 black 0 -1px black;
+}
 main{
+    width:75%;
+    box-shadow: .25rem 0 .5rem black;
+}
+#main-container{
     flex:1;
+    box-shadow: 0 .25rem .5rem black inset;
+}
+footer {
+    box-shadow: 0 0 .3rem .2rem black
 }
 
 
 /* // Medium devices (tablets, less than 992px) */
-@media (max-width: 767.98px) {
+@media (max-width: 575.98px) {
     #login-container{
         flex: 1;
         display: flex;
         justify-content: end;
+    }
+    main{
+        width:100%;
+        box-shadow: none;
+
+    }
+    .navbar-brand{
+        text-align: center;
     }
 }
