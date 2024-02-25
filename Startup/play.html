@@ -88,33 +88,41 @@
                     </ul>
                 </div>
                 
-
-            <form method="get" action="play.html">
-                <label for="jCode">Join a Game:<br></label>
-                <input type="text" id="jCode" placeholder="Join Code" required/> 
-                <button type="submit">Go</button>
-            </form><br>
-            <form method="get" action="play.html">
-                <label for="wCode">Watch a Game:<br></label>
-                <input type="text" id="wCode" placeholder="Watch Code" required/> 
-                <button type="submit">Go</button>
-            </form><br>
-            Or Start a new game:<br>
-            <form method="get" action="play.html">
-                <label for="difficulty">Difficulty:<br></label>
-                <input id = "difficulty" type = "range" min = 1 max = 10><br>
-                <fieldset>
-                    <legend>Character</legend>
-                    <label for="char1">Swordsman</label>
-                    <input id="char1" type = "radio" name="character" Value="swordsman" checked>
-                    <label for="char2">Cloak and Dagger</label>
-                    <input id="char2" type = "radio" name="character" Value="cloak">
-                    <label for="char3">Mage</label>
-                    <input id="char3" type = "radio" name="character" Value="mage">
-                </fieldset>
-                <button type="submit">Play!</button>
-            </form>
-            <button><img src="Assets/gateOption.jpeg"></button>
+                <div id = "game-start-container" class = "position-relative" style = "height:100%">
+                    <img src="Assets/gateOption.jpeg" class = "position-absolute p-0 m-0 object-fit-cover" style="top:0; left:0; width:100%; height:100%; filter:brightness(40%)">
+                    <div id = "game-start-settings" class = "position-absolute p-0 m-0 d-flex flex-column justify-content-center align-items-center text-light" style="top:0; left:0; width:100%; height:100%;">
+                        <form method="get" action="play.html">
+                            <label for="jCode">Join a Game:<br></label>
+                            <input type="text" id="jCode" placeholder="Join Code" required/> 
+                            <button type="submit" class = "btn btn-primary">Go</button>
+                        </form>
+                        <p>Or</p>
+                        <form method="get" action="play.html" class = "flex">
+                            <label for="wCode">Watch a Game:<br></label>
+                            <input type="text" id="wCode" placeholder="Watch Code" required/>
+                            <button type="submit" class = "btn btn-primary">Go</button>
+                        </form>
+                        <p>Or</p>
+                        Start a new game:
+                        <form method="get" class = "text-center" action="play.html">
+                            <h2>Game Settings:</h2>
+                            <label for="difficulty">Difficulty:<br></label>
+                            <input id = "difficulty" type = "range" min = 1 max = 10><br>
+                            <fieldset>
+                                <legend>Character</legend>
+                                <label for="char1">Swordsman</label>
+                                <input id="char1" type = "radio" name="character" Value="swordsman" checked>
+                                <label for="char2">Cloak and Dagger</label>
+                                <input id="char2" type = "radio" name="character" Value="cloak">
+                                <label for="char3">Mage</label>
+                                <input id="char3" type = "radio" name="character" Value="mage">
+                            </fieldset>
+                            <br>
+                            <button type="submit" class = "btn btn-primary">Play!</button>
+                        </form>
+                    </div>
+                    
+                </div>
             <!--hf token--></main>
         </div>
         <footer>
