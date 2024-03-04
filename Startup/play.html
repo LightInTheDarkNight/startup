@@ -58,8 +58,8 @@
         </header>
         </div>
         <div id = "main-container" >
-            <main class="mx-auto p-4 bg-light"><!--hf token-->
-                <div id = "game-container">
+            <main class="mx-auto px-4 bg-light "><!--hf token-->
+                <div id = "game-container" class = "mt-4">
                     <!--Game-->
                     <canvas id = "game" width = 320px height = 450px style = "border:solid thin black"></canvas>
                     <ul id="gamebar">
@@ -88,18 +88,24 @@
                     </ul>
                 </div>
                 
-                <div id = "game-start-container" class = "position-relative" style = "height:100%; min-height:395px; min-width:429">
+                <div id = "game-start-container" class = "position-relative p-0 mt-0" style = "height:100%; min-height:450px">
                     <img src="Assets/gateOption.jpeg" class = "position-absolute p-0 m-0 object-fit-cover" style="top:0; left:0; width:100%; height:100%; filter:brightness(40%)">
-                    <div id = "game-start-settings" class = "position-absolute p-3 m-0 d-flex flex-column justify-content-center align-items-center text-light" style="top:0; left:0; width:100%; height:100%;">
-                        <form method="get" action="play.html">
-                            <label for="jCode">Join a Game:<br></label>
-                            <input type="text" id="jCode" placeholder="Join Code" required/> 
-                            <button type="submit" class = "btn btn-primary">Go</button>
+                    <div id = "game-start-settings" class = "position-relative p-3 m-0 d-flex flex-column justify-content-center align-items-center text-light" style="top:0; left:0; width:100%; height:100%;">
+                        <form method="get" action="play.html" class = "d-flex mb-3">
+                            <div class = "form-floating">
+                                <input type="text" id="jCode" placeholder="Join Code" class = "form-control" style = "height:2rem;" required/>
+                                <label for="jCode" class = "text-dark p-2">Join a Game:</label>
+                            </div>
+                            
+                            <button type="submit" class = "btn btn-primary ">Go</button>
                         </form>
                         <p>Or</p>
-                        <form method="get" action="play.html" class = "flex">
-                            <label for="wCode">Watch a Game:<br></label>
-                            <input type="text" id="wCode" placeholder="Watch Code" required/>
+                        <form method="get" action="play.html" class = "d-flex mb-3">
+                            
+                            <div class = "form-floating">
+                                <input type="text" id="wCode" placeholder="Watch Code" class = "form-control" required/>
+                                <label for="wCode" class = "text-dark">Watch a Game:<br></label>
+                            </div>
                             <button type="submit" class = "btn btn-primary">Go</button>
                         </form>
                         <p>Or</p>
@@ -112,7 +118,7 @@
                                 <legend>Character</legend>
                                 <label for="char1">Swordsman</label>
                                 <input id="char1" type = "radio" name="character" Value="swordsman" checked>
-                                <label for="char2">Cloak and Dagger</label>
+                                <label for="char2">Dagger</label>
                                 <input id="char2" type = "radio" name="character" Value="cloak">
                                 <label for="char3">Mage</label>
                                 <input id="char3" type = "radio" name="character" Value="mage">
