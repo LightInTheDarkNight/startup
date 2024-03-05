@@ -54,6 +54,9 @@ footer {
     padding:0;
     font-size: small;
 }
+.table-active{
+    text-emphasis-style:  ;
+}
 
 /* // Medium devices (tablets, less than 992px) */
 @media (max-width: 575.98px) {
