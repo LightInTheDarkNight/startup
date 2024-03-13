@@ -88,7 +88,6 @@
                         </li>
                     </ul>
                 </div>
-                
                 <div id = "game-start-container" class = "position-relative p-0 mt-0" style = "height:100%; min-height:450px">
                     <img src="Assets/gateOption.jpeg" class = "position-absolute p-0 m-0 object-fit-cover" style="top:0; left:0; width:100%; height:100%; filter:brightness(40%)">
                     <div id = "game-start-settings" class = "position-relative p-3 m-0 d-flex flex-column justify-content-center align-items-center text-light" style="top:0; left:0; width:100%; height:100%;">
@@ -97,7 +96,6 @@
                                 <input type="text" id="jCode" placeholder="Join Code" class = "form-control" style = "height:2rem;" required/>
                                 <label for="jCode" class = "text-dark p-2">Join a Game:</label>
                             </div>
-                            
                             <button type="submit" class = "btn btn-primary ">Go</button>
                         </form>
                         <p>Or</p>
@@ -109,21 +107,26 @@
                             </div>
                             <button type="submit" class = "btn btn-primary">Go</button>
                         </form>
-                        <p>Or</p>
-                        Start a new game:
+                        <span>Or</span>
+                        <p>Start a new game:</p>
                         <form method="get" class = "text-center" action="play.html">
                             <h2>Game Settings:</h2>
-                            <label for="difficulty">Difficulty:<br></label>
-                            <input id = "difficulty" type = "range" min = 1 max = 10><br>
-                            <fieldset>
-                                <legend>Character</legend>
-                                <label for="char1">Swordsman</label>
-                                <input id="char1" type = "radio" name="character" Value="swordsman" checked>
-                                <label for="char2">Dagger</label>
-                                <input id="char2" type = "radio" name="character" Value="cloak">
-                                <label for="char3">Mage</label>
-                                <input id="char3" type = "radio" name="character" Value="mage">
-                            </fieldset>
+                            <p></p>
+                            <h4>Difficulty</h4>
+                            <span>Low <input id = "difficulty" type = "range" min = 1 max = 10> High</span>
+                            
+                            <h4>Character</h4>
+                            <div class="btn-group d-flex" role="group" aria-label="Basic radio toggle button group">
+                                
+                                <input id="char1" type="radio" class="btn-check" name="character" value="swordsman" autocomplete="off" checked>
+                                <label class="btn btn-outline-primary" for="char1">Swordsman</label>
+
+                                <input id="char2" type="radio" class="btn-check" name="character" value="cloak" autocomplete="off">
+                                <label class="btn btn-outline-primary" for="char2">Cloak</label>
+                              
+                                <input id="char3" type="radio" class="btn-check" name="character" value="mage" autocomplete="off">
+                                <label class="btn btn-outline-primary" for="char3">Mage</label>
+                            </div>
                             <br>
                             <button type="submit" class = "btn btn-primary">Play!</button>
                         </form>
