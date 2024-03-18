@@ -9,9 +9,6 @@ body{
 header {
     box-shadow: 0 0 .3rem .2rem black;
 }
-.text-darken-bg{
-    text-shadow: 1px 0px 5px black;
-}
 main{
     width:75%;
     height:100%;
@@ -56,6 +53,69 @@ footer {
 }
 .right-half{
     width: calc(100% - 2px);
+}
+
+.chat-view{
+    display:grid;
+    columns: 1;
+    grid-auto-rows: auto;
+}
+
+.chat-bubble{
+    position:relative;
+}
+.chat-bubble .cm-self{
+    background-color: aqua;
+}
+.chat-bubble .cm-other{
+    background-color: rgb(78, 138, 78);
+}
+.cm-self{
+    writing-mode: horizontal-tb;
+    direction: rtl;
+}
+
+.chat-message{
+    width: auto;
+    max-width: 55%;
+    word-wrap:break-word;
+    border: thin solid gray;
+    border-start-start-radius: .5rem;
+    border-start-end-radius: .5rem;
+    border-end-end-radius: .5rem;
+    padding: .25rem;
+    margin-block: .25rem;
+    margin-inline: 0 .25rem;
+    display:inline-block;
+    position:relative;
+    inset-block-start: 0;
+    inset-block-end: 0;
+    z-index: 5;
+
+}
+.chat-tip-container{
+    width:1.1rem;
+    height:1rem;
+    position:relative;
+    inset-block-end: -0.65rem;
+    inset-inline-end: -0.45rem;
+    border-block-end: thin solid gray;
+    border-radius:0;
+    display: inline-block;
+    z-index: 6;
+}
+.chat-tip-container::after{
+    content:"";
+    border-block-end: thin solid gray;
+    border-inline-end: thin solid gray;
+    background-color: rgb(248, 249, 250);
+    position:absolute;
+    inset-inline-start: -0.1rem;
+    inset-block-start: -0.1rem;
+    border-end-end-radius: 1rem;
+    width:1.05rem;
+    height:1.1rem;
+    display: inline-block;
 }
 
 /* // small devices (tablets, less than 576px) */
