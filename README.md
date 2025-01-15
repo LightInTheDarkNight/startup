@@ -29,8 +29,20 @@ Chat functionality is the secondary main functionality, with cooperative play an
 
 Each user will have an account to save preferences for gameplay and to enable chat features and friend requests. There may be an option to link to existing platforms at some point, like signing in with Google, Facebook, or even Apple's gamecenter, depending on how far this project gets.
 
+#### HTML
+Basic Structure and content. Pages for Login, Chat, Play, Friends, Account, etc. Possible reduction with use of React.
+
+#### CSS
+Adaptive styling that looks goood and interesting on a variety of different screen sizes. Smooth and modern appearance and design.
+
+#### React
+Will provide Login, game settings, and game play elements in a streamlined flow. Will help chat experience to be seamless and integrated with other code areas.
+
+#### Web Service
+Authentication - Use of the third party GetOTP service to verify emails and phone numbers used on the website. Potential integration with SSO providers, including Apple, Google, and Facebook. Chat featuress potentially added this way. 
+
 #### Authentication
-Users will have individual logins and basic profile information associated with them.
+Users will have individual logins and basic profile information associated with them. 
 
 #### Database Data
 The database will store highscores for individual players, as well as characters the players have created and users' chat history.
