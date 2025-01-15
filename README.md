@@ -27,7 +27,7 @@ Rougelike game is the main functionality, with fully randomly generated dungeons
 
 Chat functionality is the secondary main functionality, with cooperative play and observation the third stage and then enhancements of gameplay the  final stage of development.
 
-Each user will have an account to save preferences for gameplay and to enable chat features and friend requests. There may be an option to link to existing platforms at somepoint, like signing in with Google, Facebook, or even Apple's gamecenter, depending on how far this project gets.
+Each user will have an account to save preferences for gameplay and to enable chat features and friend requests. There may be an option to link to existing platforms at some point, like signing in with Google, Facebook, or even Apple's gamecenter, depending on how far this project gets.
 
 #### Authentication
 Users will have individual logins and basic profile information associated with them.
@@ -36,7 +36,7 @@ Users will have individual logins and basic profile information associated with 
 The database will store highscores for individual players, as well as characters the players have created and users' chat history.
 
 #### WebSocket data
-Data from the server rendered on the user's screen will include realtime chat data, scoring data, friends' statistics and scores, how many players are playing with you or watchin gyou play, and so forth.
+Data from the server rendered on the user's screen will include realtime chat data, scoring data, friends' statistics and scores, how many players are playing with you or watching you play, and so forth.
 
 #### Concept Art/Wireframes
 ![Main Page (not logged in)](/Startup/ConceptArt/MainPageLoggedOut.png)
