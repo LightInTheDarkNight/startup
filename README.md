@@ -9,10 +9,10 @@ Changes:
    - Including the tags Body, Nav, Main, Header, and Footer on each page
  - Links to each page from the home page via the nav bar (account info page is behind the login page - it will accept anything as a username and password right now)
  - Standin text and images for the eventual project features, including a picture and settings inputs to stand in for the game, input fields for options to join or watch another game, login placeholders, mimic chat structure, and more
- - Login page includes a placeholder login form, and submitting it takes you to the account page, including placeholder displays for account info including screen name, rank, friends summary, and highscore.
+ - Login page includes a placeholder login form, and submitting it takes you to the account page, including placeholder displays for account info including user name, rank, friends summary, and highscore.
  - Database placeholder on the leaderboard page
  - Websocket placeholder on the chat page
- - 3rd party service placeholder on the login page (SSO option) and in account creation functionality
+ - 3rd party service placeholder on the login page (SSO option) and in account creation functionality not currently visible (GetOTP call for email verification)
 
 ## Specifications
 
