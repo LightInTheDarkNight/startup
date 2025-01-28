@@ -24,10 +24,9 @@
 
 
 ## Server Details
-- IP 100.24.112.206
-- Connect: http://100.24.112.206/
-  - http://delversdomain.click/
-- SSH ssh -i [key pair file] ubuntu@100.24.112.206
+- IP 54.92.152.99
+- https://delvers-domain.click/
+- SSH: ssh ubuntu@delvers-domain.click
 
 ## HTML Notes
 - &lt;div&gt; creates a block of text; it is not an inline element or a meaningless one.
