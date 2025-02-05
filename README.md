@@ -3,6 +3,19 @@ CS 260 Internet startup
 
 [Class Notes](notes.md)
 
+- To-do: 
+ - Fix responsiveness bug with narrow windows on chat page
+ - re-style login page
+
+## CSS Deliverable
+- Simon CSS deployed
+- CSS added to main pages header, footer, main and Navigation elements
+- Leaderboard styled for readability, general navbar and footer style added
+- Bootstrap implemented with most elements
+- Custom CSS used to give the vhat bubbles on the chat page their shape
+- Style Responsive to window resizing
+- Styling applied to application element mock-ups
+
 ## HTML Deliverable
 Changes:
  - framework of pages created representing the final functionality of the app, including home, play, friends, chat, login, leaderboard, and account info pages

@@ -62,7 +62,7 @@
             <main class="mx-auto p-4 bg-light"><!--hf token-->
                 <div class = "container-md d-flex flex-column gap-3 align-items-center mx-auto">
                     <h1>Your Chats:</h1>
-                    <div id = "chat-list-and-window" class = "d-flex border rounded w-100">
+                    <div id = "chat-list-and-window" class = "d-flex flex-row flex-sm-wrap border rounded w-100">
                         <div id = "chat-list" class="p-0 m-0">
                             <div class="btn-group-vertical h-100" role="group" aria-label="Vertical button group">
                                 <div class="btn-group dropend flex-fill">
@@ -115,7 +115,7 @@
                             </div>
                         </div>
                         <div class = "vr"></div>
-                        <div id = "chat-view" class = "border-start-0 rounded-3 mx-auto flex-grow-1">
+                        <div id = "chat-view" class = "flex-grow-1 border-start-0 rounded-3">
                             <div class = "chat-bubble">
                                 <div class = "chat-tip-container cm-other">
                                     <!--div class = "curve"></div-->
@@ -127,12 +127,12 @@
                             
                             <div class = "chat-bubble cm-self">
                                 <div class = "chat-tip-container cm-self"></div>
-                                <div class = "chat-message cm-self">Alll offf theee stuffff<br>and some more<br>and some moreeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee</div>
+                                <div class = "chat-message cm-self">Alll offf theee stuffff<br>and some more<br>and some moreeeeeeeeee</div>
                             </div>
                             
                             <hr>
                             <form method="get" action="#" class = "d-flex mb-1">
-                                <input type="text" id="jCode" placeholder="type your message here" class = "border rounded-5 px-3 m-1" required/>
+                                <input type="text" id="jCode" placeholder="type your message here" class = "flex-grow-1 border rounded-5 px-3 m-1" required/>
                                 <button type="submit" class = "btn btn-primary rounded-circle m-1 ">Up</button>
                             </form>
                         </div>

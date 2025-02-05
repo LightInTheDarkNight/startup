@@ -34,3 +34,22 @@
 - &lt;span&gt; creates an inline division of the text, so something can be coded in the background as a name or as a reference without breaking the flow of the text for the viewer
   - &lt;a&gt; and &lt;b&gt; tags, for links and emphasis, are also inline
 - The ID attribute of an element can be used as a link by using &lt;a href = "#&lt;id name here&gt;"&gt;
+
+## CSS Notes
+### Selectors
+- By element type: elementName
+ - e.g. "body {}"
+- Decendants: element element
+ - body p {}
+- Direct child: element > child
+ - body > p {}
+- General sibling: element ~ sibling
+ - p ~ div {} (selects all divs that are siblings to p elements)
+- Adjacent sibling: element + sibling
+ - p + div {}
+- By class: ".class"
+ - .id-display {} (all elements with the class "id-display")
+ - p.id-display {} (p elements with that class)
+- By id: "#id"
+ - #password-field {}
+- By Attribute: "\[attribute(optional: =value)]"
