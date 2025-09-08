@@ -27,7 +27,7 @@ Changes:
  - Websocket placeholder on the chat page
  - 3rd party service placeholder on the login page (SSO option) and in account creation functionality not currently visible (GetOTP call for email verification)
 
-## Specifications
+## Specification
 
 ### Pitch
 
@@ -49,10 +49,10 @@ Basic Structure and content. Pages for Login, Chat, Play, Friends, Account, etc.
 Adaptive styling that looks goood and interesting on a variety of different screen sizes. Smooth and modern appearance and design.
 
 #### React
-Will provide Login, game settings, and game play elements in a streamlined flow. Will help chat experience to be seamless and integrated with other code areas.
+Will provide login, game settings, and game play elements in a streamlined flow. Will help chat experience to be seamless and integrated with other code areas.
 
 #### Web Service
-Authentication - Use of the third party GetOTP service to verify emails and phone numbers used on the website. Potential integration with SSO providers, including Apple, Google, and Facebook. Chat featuress potentially added this way. 
+Authentication - Use of the third party GetOTP service to verify emails and phone numbers used on the website. Potential integration with SSO providers, including Apple, Google, and Facebook. Chat features potentially added this way. 
 
 #### Authentication
 Users will have individual logins and basic profile information associated with them. 
@@ -67,3 +67,4 @@ Data from the server rendered on the user's screen will include realtime chat da
 ![Main Page (not logged in)](/Startup/ConceptArt/MainPageLoggedOut.png)
 ![Friends Page](/Startup/ConceptArt/FriendsPage.png)
 ![Profile Page](/Startup/ConceptArt/ProfilePage.png)
+
