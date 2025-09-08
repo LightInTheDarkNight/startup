@@ -1,11 +1,3 @@
-# Startup
-CS 260 Internet startup
-
-[Class Notes](notes.md)
-
-- To-do: 
- - Fix responsiveness bug with narrow windows on chat page
- - re-style login page
 
 ## CSS Deliverable
 - Simon CSS deployed
@@ -27,20 +19,51 @@ Changes:
  - Websocket placeholder on the chat page
  - 3rd party service placeholder on the login page (SSO option) and in account creation functionality not currently visible (GetOTP call for email verification)
 
-## Specification
+# Startup
+CS 260 Internet startup
 
-### Pitch
+[Class Notes](notes.md)
+
+- To-do: 
+ - Fix responsiveness bug with narrow windows on chat page
+ - re-style login page
+
+Multiplayer, online roguelike game with a simple friend and chat network. Initiated as a class project for BYU's CS 260 course.
+
+
+## 🚀 Specification Deliverable
+
+> [!NOTE]
+>  Fill in this sections as the submission artifact for this deliverable. You can refer to this [example](https://github.com/webprogramming260/startup-example/blob/main/README.md) for inspiration.
+
+For this deliverable I did the following. I checked the box `[x]` and added a description for things I completed.
+
+- [ ] Proper use of Markdown
+- [ ] A concise and compelling elevator pitch
+- [ ] Description of key features
+- [ ] Description of how you will use each technology
+- [ ] One or more rough sketches of your application. Images must be embedded in this file using Markdown image references.
+
+### Elevator pitch
 
 Imagine a roguelike game that you can cooperate on with your friends! So you can play like a wizard, your friend can hold the knives, and you have to find the exit for the maze-like dungeon! It would adjust the difficulty and size of the dungeon maze depending on how many players were in the game when the level was generated, so you can play in the same game alone and with friends, and it would support an integrated chat so you could collaborate real-time.
 
-### Specifics
+### Design
+
+![Main Page (not logged in)](/Startup/ConceptArt/MainPageLoggedOut.png)
+![Friends Page](/Startup/ConceptArt/FriendsPage.png)
+![Profile Page](/Startup/ConceptArt/ProfilePage.png)
+
+
+
+### Key features
 
 End goal:
-Rougelike game is the main functionality, with fully randomly generated dungeons that can change size depending on how many players are present.
+ - Rougelike game is the main functionality, with fully randomly generated dungeons that can change size depending on how many players are present.
 
-Chat functionality is the secondary main functionality, with cooperative play and observation the third stage and then enhancements of gameplay the  final stage of development.
+ - Chat functionality is the secondary main functionality, with cooperative play and observation the third stage and then enhancements of gameplay the  final stage of development.
 
-Each user will have an account to save preferences for gameplay and to enable chat features and friend requests. There may be an option to link to existing platforms at some point, like signing in with Google, Facebook, or even Apple's gamecenter, depending on how far this project gets.
+ - Each user will have an account to save preferences for gameplay and to enable chat features and friend requests. There may be an option to link to existing platforms at some point, like signing in with Google, Facebook, or even Apple's gamecenter, depending on how far this project gets.
 
 Development path:
 1. Basic website frame.                                                           Technologies: HTML, CSS.
@@ -53,30 +76,89 @@ Development path:
 8. Play with up to four other players, using a pre-game lobby. In-game chat.
 9. Play with up to ten other players, dynamic joining and leaving allowed.
 
-#### HTML
-Basic Structure and content. Pages for Login, Chat, Play, Friends, Account, etc. Possible reduction with use of React.
 
-#### CSS
-Adaptive styling that looks goood and interesting on a variety of different screen sizes. Smooth and modern appearance and design.
+### Technologies
 
-#### React
-Will provide login, game settings, and game play elements in a streamlined flow. Will help chat experience to be seamless and integrated with other code areas.
+I am going to use the required technologies in the following ways.
 
-#### Web Service
-Authentication - Use of the third party GetOTP service to verify emails and phone numbers used on the website. Potential integration with SSO providers, including Apple, Google, and Facebook. Chat features potentially added this way. Functinoality endpoint for game observation/multiplayer updating. Testing, temporary endpoint for clearing the database.
+- **HTML** - Basic Structure and content. Pages for Login, Chat, Play, Friends, Account, etc. Possible reduction with use of React.
+- **CSS** - Adaptive styling that looks goood and interesting on a variety of different screen sizes. Smooth and modern appearance and design.
+- **React** - Will provide login pipeline, game settings, and game play elements in a streamlined flow. Will help chat experience to be seamless and integrated with other code areas.
+- **Service** - Authentication - Use of the third party GetOTP service to verify emails and phone numbers used on the website. Potential integration with SSO providers, including Apple, Google, and Facebook. Chat features potentially added this way. Functinoality endpoint for game observation/multiplayer updating. Testing, temporary endpoint for clearing the database.
+- **DB/Login** - The database will give persistence to user data, including login information, highscores, customized characters the players have created and users' chat history. Login will be implemented via react and/or third party SSO.
+- **WebSocket** - Data from the server rendered on the user's screen will include realtime chat data, scoring data, friends' statistics and scores, how many players are playing with you or watching you play, and so forth. Initial implementation will be for the dummy game or observation of it.
 
-#### Authentication
-Users will have individual logins and basic profile information associated with them. 
+## 🚀 AWS deliverable
 
-#### Database Data
-The database will store highscores for individual players, as well as characters the players have created and users' chat history.
+For this deliverable I did the following. I checked the box `[x]` and added a description for things I completed.
 
-#### WebSocket data
-Data from the server rendered on the user's screen will include realtime chat data, scoring data, friends' statistics and scores, how many players are playing with you or watching you play, and so forth.
+- [ ] **Server deployed and accessible with custom domain name** - [My server link](https://yourdomainnamehere.click).
 
-#### Concept Art/Wireframes
-![Main Page (not logged in)](/Startup/ConceptArt/MainPageLoggedOut.png)
-![Friends Page](/Startup/ConceptArt/FriendsPage.png)
-![Profile Page](/Startup/ConceptArt/ProfilePage.png)
+## 🚀 HTML deliverable
+
+For this deliverable I did the following. I checked the box `[x]` and added a description for things I completed.
+
+- [ ] **HTML pages** - I did not complete this part of the deliverable.
+- [ ] **Proper HTML element usage** - I did not complete this part of the deliverable.
+- [ ] **Links** - I did not complete this part of the deliverable.
+- [ ] **Text** - I did not complete this part of the deliverable.
+- [ ] **3rd party API placeholder** - I did not complete this part of the deliverable.
+- [ ] **Images** - I did not complete this part of the deliverable.
+- [ ] **Login placeholder** - I did not complete this part of the deliverable.
+- [ ] **DB data placeholder** - I did not complete this part of the deliverable.
+- [ ] **WebSocket placeholder** - I did not complete this part of the deliverable.
+
+## 🚀 CSS deliverable
+
+For this deliverable I did the following. I checked the box `[x]` and added a description for things I completed.
+
+- [ ] **Header, footer, and main content body** - I did not complete this part of the deliverable.
+- [ ] **Navigation elements** - I did not complete this part of the deliverable.
+- [ ] **Responsive to window resizing** - I did not complete this part of the deliverable.
+- [ ] **Application elements** - I did not complete this part of the deliverable.
+- [ ] **Application text content** - I did not complete this part of the deliverable.
+- [ ] **Application images** - I did not complete this part of the deliverable.
+
+## 🚀 React part 1: Routing deliverable
+
+For this deliverable I did the following. I checked the box `[x]` and added a description for things I completed.
+
+- [ ] **Bundled using Vite** - I did not complete this part of the deliverable.
+- [ ] **Components** - I did not complete this part of the deliverable.
+- [ ] **Router** - I did not complete this part of the deliverable.
+
+## 🚀 React part 2: Reactivity deliverable
+
+For this deliverable I did the following. I checked the box `[x]` and added a description for things I completed.
+
+- [ ] **All functionality implemented or mocked out** - I did not complete this part of the deliverable.
+- [ ] **Hooks** - I did not complete this part of the deliverable.
+
+## 🚀 Service deliverable
+
+For this deliverable I did the following. I checked the box `[x]` and added a description for things I completed.
+
+- [ ] **Node.js/Express HTTP service** - I did not complete this part of the deliverable.
+- [ ] **Static middleware for frontend** - I did not complete this part of the deliverable.
+- [ ] **Calls to third party endpoints** - I did not complete this part of the deliverable.
+- [ ] **Backend service endpoints** - I did not complete this part of the deliverable.
+- [ ] **Frontend calls service endpoints** - I did not complete this part of the deliverable.
+- [ ] **Supports registration, login, logout, and restricted endpoint** - I did not complete this part of the deliverable.
 
 
+## 🚀 DB deliverable
+
+For this deliverable I did the following. I checked the box `[x]` and added a description for things I completed.
+
+- [ ] **Stores data in MongoDB** - I did not complete this part of the deliverable.
+- [ ] **Stores credentials in MongoDB** - I did not complete this part of the deliverable.
+
+## 🚀 WebSocket deliverable
+
+For this deliverable I did the following. I checked the box `[x]` and added a description for things I completed.
+
+- [ ] **Backend listens for WebSocket connection** - I did not complete this part of the deliverable.
+- [ ] **Frontend makes WebSocket connection** - I did not complete this part of the deliverable.
+- [ ] **Data sent over WebSocket connection** - I did not complete this part of the deliverable.
+- [ ] **WebSocket data displayed** - I did not complete this part of the deliverable.
+- [ ] **Application is fully functional** - I did not complete this part of the deliverable.
