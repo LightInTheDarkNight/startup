@@ -42,6 +42,17 @@ Chat functionality is the secondary main functionality, with cooperative play an
 
 Each user will have an account to save preferences for gameplay and to enable chat features and friend requests. There may be an option to link to existing platforms at some point, like signing in with Google, Facebook, or even Apple's gamecenter, depending on how far this project gets.
 
+Development path:
+1. Basic website frame.                                                           Technologies: HTML, CSS.
+2. Login pathway.                                                                 Technologies added: React, authentication.
+3. User information persistence.                                                  Technologies added: Database, 3rd party API for user verification.
+4. Playable dummy game, maze-like perhaps. Highscore storage and display.         Technologies added: Websocket.
+5. Observation of others by username.                                             Technologies: Expanded Websocket. End of CS 260.
+6. Friend network and chat.
+7. Rouge-like realization.
+8. Play with up to four other players, using a pre-game lobby. In-game chat.
+9. Play with up to ten other players, dynamic joining and leaving allowed.
+
 #### HTML
 Basic Structure and content. Pages for Login, Chat, Play, Friends, Account, etc. Possible reduction with use of React.
 
@@ -52,7 +63,7 @@ Adaptive styling that looks goood and interesting on a variety of different scre
 Will provide login, game settings, and game play elements in a streamlined flow. Will help chat experience to be seamless and integrated with other code areas.
 
 #### Web Service
-Authentication - Use of the third party GetOTP service to verify emails and phone numbers used on the website. Potential integration with SSO providers, including Apple, Google, and Facebook. Chat features potentially added this way. 
+Authentication - Use of the third party GetOTP service to verify emails and phone numbers used on the website. Potential integration with SSO providers, including Apple, Google, and Facebook. Chat features potentially added this way. Functinoality endpoint for game observation/multiplayer updating. Testing, temporary endpoint for clearing the database.
 
 #### Authentication
 Users will have individual logins and basic profile information associated with them. 
@@ -67,4 +78,5 @@ Data from the server rendered on the user's screen will include realtime chat da
 ![Main Page (not logged in)](/Startup/ConceptArt/MainPageLoggedOut.png)
 ![Friends Page](/Startup/ConceptArt/FriendsPage.png)
 ![Profile Page](/Startup/ConceptArt/ProfilePage.png)
+
 
