@@ -1,28 +1,8 @@
-
-## CSS Deliverable
-- Simon CSS deployed
-- CSS added to main pages header, footer, main and Navigation elements
-- Leaderboard styled for readability, general navbar and footer style added
-- Bootstrap implemented with most elements
-- Custom CSS used to give the vhat bubbles on the chat page their shape
-- Style Responsive to window resizing
-- Styling applied to application element mock-ups
-
-## HTML Deliverable
-Changes:
- - framework of pages created representing the final functionality of the app, including home, play, friends, chat, login, leaderboard, and account info pages
-   - Including the tags Body, Nav, Main, Header, and Footer on each page
- - Links to each page from the home page via the nav bar (account info page is behind the login page - it will accept anything as a username and password right now)
- - Standin text and images for the eventual project features, including a picture and settings inputs to stand in for the game, input fields for options to join or watch another game, login placeholders, mimic chat structure, and more
- - Login page includes a placeholder login form, and submitting it takes you to the account page, including placeholder displays for account info including user name, rank, friends summary, and highscore.
- - Database placeholder on the leaderboard page
- - Websocket placeholder on the chat page
- - 3rd party service placeholder on the login page (SSO option) and in account creation functionality not currently visible (GetOTP call for email verification)
-
 # Startup
 CS 260 Internet startup
 
 [Class Notes](notes.md)
+[Project Website](https://delvers-domain.click/)
 
 - To-do: 
  - Fix responsiveness bug with narrow windows on chat page
@@ -38,11 +18,11 @@ Multiplayer, online roguelike game with a simple friend and chat network. Initia
 
 For this deliverable I did the following. I checked the box `[x]` and added a description for things I completed.
 
-- [ ] Proper use of Markdown
-- [ ] A concise and compelling elevator pitch
-- [ ] Description of key features
-- [ ] Description of how you will use each technology
-- [ ] One or more rough sketches of your application. Images must be embedded in this file using Markdown image references.
+- [x] Proper use of Markdown (see notes and this document)
+- [x] A concise and compelling elevator pitch
+- [x] Description of key features
+- [x] Description of how you will use each technology
+- [x] One or more rough sketches of your application. Images must be embedded in this file using Markdown image references.
 
 ### Elevator pitch
 
@@ -53,8 +33,6 @@ Imagine a roguelike game that you can cooperate on with your friends! So you can
 ![Main Page (not logged in)](/Startup/ConceptArt/MainPageLoggedOut.png)
 ![Friends Page](/Startup/ConceptArt/FriendsPage.png)
 ![Profile Page](/Startup/ConceptArt/ProfilePage.png)
-
-
 
 ### Key features
 
@@ -92,32 +70,33 @@ I am going to use the required technologies in the following ways.
 
 For this deliverable I did the following. I checked the box `[x]` and added a description for things I completed.
 
-- [ ] **Server deployed and accessible with custom domain name** - [My server link](https://yourdomainnamehere.click).
+- [x] **Server deployed and accessible with custom domain name** - [My server link](https://delvers-domain.click/).
 
 ## 🚀 HTML deliverable
 
 For this deliverable I did the following. I checked the box `[x]` and added a description for things I completed.
 
-- [ ] **HTML pages** - I did not complete this part of the deliverable.
-- [ ] **Proper HTML element usage** - I did not complete this part of the deliverable.
-- [ ] **Links** - I did not complete this part of the deliverable.
-- [ ] **Text** - I did not complete this part of the deliverable.
-- [ ] **3rd party API placeholder** - I did not complete this part of the deliverable.
-- [ ] **Images** - I did not complete this part of the deliverable.
-- [ ] **Login placeholder** - I did not complete this part of the deliverable.
-- [ ] **DB data placeholder** - I did not complete this part of the deliverable.
-- [ ] **WebSocket placeholder** - I did not complete this part of the deliverable.
+- [x] **HTML pages** - framework of pages created representing the final functionality of the app, including home, play, friends, chat, login, leaderboard, and account info pages
+- [x] **Proper HTML element usage** - Included the tags Body, Nav, Main, Header, and Footer on each page
+- [x] **Links** - Links to each page from the home page via the nav bar (account info page is behind the login page - it will accept anything as a username and password right now)
+- [x] **Text** - Standin text and images for the eventual project features, including a picture and settings inputs to stand in for the game, input fields for options to join or watch another game, login placeholders, mimic chat structure, and more
+- [x] **3rd party API placeholder** - 3rd party service placeholder on the login page (SSO option) and in account creation functionality not currently visible (GetOTP call for email verification)
+- [x] **Images** - Used in the header and the game's placeholder; see Text section above
+- [x] **Login placeholder** - Login page includes a placeholder login form, and submitting it takes you to the account page, including placeholder displays for account info including user name, rank, friends summary, and highscore.
+- [x] **DB data placeholder** - Database placeholder on the leaderboard page
+- [x] **WebSocket placeholder** - Websocket placeholder on the chat page
 
 ## 🚀 CSS deliverable
 
 For this deliverable I did the following. I checked the box `[x]` and added a description for things I completed.
 
-- [ ] **Header, footer, and main content body** - I did not complete this part of the deliverable.
-- [ ] **Navigation elements** - I did not complete this part of the deliverable.
-- [ ] **Responsive to window resizing** - I did not complete this part of the deliverable.
-- [ ] **Application elements** - I did not complete this part of the deliverable.
-- [ ] **Application text content** - I did not complete this part of the deliverable.
-- [ ] **Application images** - I did not complete this part of the deliverable.
+- [x] **Header, footer, and main content body** - CSS added to main pages header, footer, main and Navigation elements
+- [x] **Navigation elements** - See above
+- [x] **Responsive to window resizing** - Style Responsive to window resizing
+- [x] **Application elements** - Styling applied to application element mock-ups; leaderboard styled for readability, general navbar and footer style added
+- [x] **Application text content** - Custom CSS used to give the vhat bubbles on the chat page their shape and contrast the text
+- [x] **Application images** - CSS used to stretch and frame the images in the universal header and game placeholder; used to tile the buttons on the main page
+- Bootstrap implemented with most elements
 
 ## 🚀 React part 1: Routing deliverable
 
@@ -162,3 +141,4 @@ For this deliverable I did the following. I checked the box `[x]` and added a de
 - [ ] **Data sent over WebSocket connection** - I did not complete this part of the deliverable.
 - [ ] **WebSocket data displayed** - I did not complete this part of the deliverable.
 - [ ] **Application is fully functional** - I did not complete this part of the deliverable.
+
