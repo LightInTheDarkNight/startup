@@ -53,3 +53,14 @@
 - By id: "#id"
  - #password-field {}
 - By Attribute: "\[attribute(optional: =value)]"
+
+
+##JS Notes
+###Node packages
+1. Create your project directory
+1. Initialize it for use with NPM by running `npm init -y`
+1. Make sure `.gitignore` file contains `node_modules`
+1. Install any desired packages with `npm install <package name here>`
+1. Add `require('<package name here>')` to your application's JavaScript
+1. Use the code the package provides in your JavaScript
+1. Run your code with `node index.js`
