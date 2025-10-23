@@ -55,7 +55,10 @@
 - By Attribute: "\[attribute(optional: =value)]"
 
 
+
 ##JS Notes
+###Using Node
+- use -e and "" to run written scripts
 ###Node packages
 1. Create your project directory
 1. Initialize it for use with NPM by running `npm init -y`
