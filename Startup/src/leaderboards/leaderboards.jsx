@@ -1,65 +1,8 @@
-<!DOCTYPE html>
-<!--Storage for the template for the frame for the website-->
-<!--Just in case I want to change something and copy easy-->
-<html>
-    <head>
-        <title>Delver's Domain</title>
-        <link rel="icon" href="Assets/DelversIcon.ico" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-        <link rel = "stylesheet" href = index.css>
-    </head>
-    <Body class="bg-secondary">
-        <div class="sticky-top m-0 p-0" style="top:0">
-        <header>
-            
-            <nav class = "navbar bg-dark p-0 position-relative" data-bs-theme="dark" >
-                <div class = "container-fluid p-0" style = height:66px>
-                    <img src = "Assets/Banner_Option_Preview.jpeg" class="object-fit-lg-cover object-fit-none border position-absolute" alt="Dungeon Doors" style = "height:100%; width:100%; filter:brightness(50%); z-index: 2;">
-                    <a class="navbar-brand m-0 stretched-link" href="index.html" style="padding:0.5rem 1rem; z-index: 8;">Delvers Domain</a>
-                </div>
-                
-            </nav>
-            <nav class = "navbar nav-underline navbar-expand-sm bg-dark" data-bs-theme="dark">
-                <div class="container-fluid">
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+import React from "react";
 
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                      <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href = "index.html">Home</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href = "play.html">Play</a>
-                      </li>
-                      <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                          Community
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="leaderboards.html">Leaderboards</a></li>
-                            <li class="dropdown-item-text">Social:</li>
-                            <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item" href="friends.html"><span class = "placeholder col-1 invisible"></span>Friends</a></li>
-                            <li><a class="dropdown-item" href="chat.html"><span class = "placeholder col-1 invisible"></span>Chat</a></li>
-                        </ul>
-                      </li>
-                    </ul>
-                </div>
-
-                <div class="d-flex" role="login">
-                    <a class="nav-link" href="login.html"><button class = "btn btn-outline-primary my-2 my-sm-0">Login/Account</button> </a>
-                </div>
-                </div>
-            </nav>
-
-            
-        </header>
-        </div>
-        <div id = "main-container" >
-            <main class="mx-auto p-4 bg-light"><!--hf token-->
+export function Leaderboards() {
+    return (
+        <main class="mx-auto p-4 bg-light">
             <h2>Friends</h2>
             <div class = "table-responsive">
                 <table class="table table-light table-striped">
@@ -196,19 +139,6 @@
                 </tbody>
             </table></div>
             
-        <!--hf token--></main>
-        </div>
-        <footer>
-            <div class="bg-dark my-0 text-light py-3 px-4">
-                Created by AJ Boyd, a Consumate Nerd and Honorary Genius (because he's not smart enough).
-                <a class = "icon-link position-absolute end-0 mx-3" target="_blank" href = "https://github.com/LightInTheDarkNight/startup.git">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up-right-square" viewBox="0 0 16 16">
-                        <path fill-rule="evenodd" d="M15 2a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1zM0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm5.854 8.803a.5.5 0 1 1-.708-.707L9.243 6H6.475a.5.5 0 1 1 0-1h3.975a.5.5 0 0 1 .5.5v3.975a.5.5 0 1 1-1 0V6.707z"/>
-                    </svg>
-                    Github Repository
-                </a>
-            </div>
-        </footer>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    </Body>
-</html>
+        </main>
+    );
+}

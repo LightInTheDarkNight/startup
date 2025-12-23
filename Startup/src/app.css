@@ -9,6 +9,10 @@
 header {
     box-shadow: 0 0 .3rem .2rem black;
 }
+#MainNav{
+    padding-right: .75rem;
+    padding-left: .75rem;
+}
 main{
     width:75%;
     height:100%;
@@ -17,6 +21,8 @@ main{
 #main-container{
     flex:1;
     box-shadow: 0 .25rem .5rem black inset;
+    margin:0;
+    padding:0;
 }
 .col{
     padding: 8px;
