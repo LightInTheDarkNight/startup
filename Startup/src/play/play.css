@@ -1,0 +1,19 @@
+.form-floating label {
+    --bs-text-opacity: 1;
+    color: rgba(var(--bs-dark-rgb), var(--bs-text-opacity));
+}
+#game-start-container {
+    background-image: url('/gateOption.jpeg');
+    background-size: cover;
+    background-position: center;
+}
+#game-start-container::before {
+    content:"";
+    background-color: rgba(0, 0, 0, 0.60);
+    inset:0;
+    position:absolute;
+    z-index: 0;
+}
+#game-start-container * {
+    z-index:1;
+}
