@@ -38,7 +38,7 @@ export function Play() {
                     <Stack className='p-3 m-1 justify-content-center align-items-center text-light'>
                         <Form className='d-flex mb-1 g-3'>
                             <FloatingLabel label='Join a Game:' controlId='joinID'>
-                                <Form.Control type='text' placeholder='Join Code:' id='joinID' required/>
+                                <Form.Control type='text' placeholder='Join Code:' required/>
                             </FloatingLabel>
                             <Button type='submit' variant='primary'>Go</Button>
                         </Form>
@@ -60,7 +60,7 @@ export function Play() {
                             <h4>Character</h4>
                             <div className="btn-group d-flex" role="group" aria-label="Basic radio toggle button group">
                                 
-                                <input id="char1" type="radio" className="btn-check" name="character" value="swordsman" autoComplete="off" checked/>
+                                <input id="char1" type="radio" className="btn-check" name="character" value="swordsman" autoComplete="off" defaultChecked/>
                                 <label className="btn btn-outline-primary" htmlFor="char1">Swordsman</label>
 
                                 <input id="char2" type="radio" className="btn-check" name="character" value="cloak" autoComplete="off"/>
