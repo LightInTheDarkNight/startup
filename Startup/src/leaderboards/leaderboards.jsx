@@ -2,10 +2,10 @@ import React from "react";
 
 export function Leaderboards() {
     return (
-        <main class="mx-auto p-4 bg-light">
+        <main className="mx-auto p-4 bg-light">
             <h2>Friends</h2>
-            <div class = "table-responsive">
-                <table class="table table-light table-striped">
+            <div className="table-responsive">
+                <table className="table table-light table-striped">
                     <thead>
                         <tr>
                             <th scope="col">Rank</th>
@@ -15,7 +15,7 @@ export function Leaderboards() {
                             <th scope="col">Class</th>
                         </tr>
                     </thead>
-                    <tbody class="table-group-divider">
+                    <tbody className="table-group-divider">
                         <tr>
                             <th scope="row">1</th>
                             <td>John</td>
@@ -23,7 +23,7 @@ export function Leaderboards() {
                             <td>11562</td>
                             <td>Swordsman</td>
                         </tr>
-                        <tr class = "table-active">
+                        <tr className="table-active">
                             <th scope="row">2</th>
                             <td>You</td>
                             <td>36</td>
@@ -56,7 +56,7 @@ export function Leaderboards() {
             </div>
             
             <h2>Global</h2>
-            <div class = "table-responsive"><table class="table table-light table-striped">
+            <div className="table-responsive"><table className="table table-light table-striped">
                 <thead>
                     <tr>
                         <th scope="col">Rank</th>
@@ -66,7 +66,7 @@ export function Leaderboards() {
                         <th scope="col">Class</th>
                     </tr>
                 </thead>
-                <tbody class="table-group-divider">
+                <tbody className="table-group-divider">
                     <tr>
                         <th scope="row">1</th>
                         <td>SquidKid</td>
@@ -96,7 +96,7 @@ export function Leaderboards() {
                         <td>Archer</td>
                     </tr>
                     <tr>
-                        <th scope="row"colspan="5" class = "text-center">....</th>
+                        <th scope="row" colSpan="5" className="text-center">....</th>
                     </tr>
                     <tr>
                         <th scope="row">4000000</th>
@@ -112,7 +112,7 @@ export function Leaderboards() {
                         <td>1200</td>
                         <td>Scout</td>
                     </tr>
-                    <tr class = "table-active">
+                    <tr className="table-active">
                         <th scope="row">4000002</th>
                         <td>You</td>
                         <td>24</td>
@@ -134,7 +134,7 @@ export function Leaderboards() {
                         <td>Scout</td>
                     </tr>
                     <tr>
-                        <th scope="row"colspan="5" class = "text-center">....</th>
+                        <th scope="row"colSpan="5" className="text-center">....</th>
                     </tr>
                 </tbody>
             </table></div>

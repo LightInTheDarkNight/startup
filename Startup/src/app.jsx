@@ -16,8 +16,8 @@ import { Button, Nav, Navbar, NavDropdown, Placeholder } from 'react-bootstrap';
 export default function App() {
   return (
     <BrowserRouter>
-    <div className="body bg-secondary m-0">
-        <div className="sticky-top m-0 p-0" style={{top:0}}>
+    <div className="body m-0">
+        <div className="sticky-top m-0 p-0" >
             <header>
                 <Navbar variant='dark' bg='dark' className="p-0 position-relative bg-dark" >
                     <div className="container-fluid p-0" style={{height:'66px'}}>
@@ -26,7 +26,6 @@ export default function App() {
                     </div>
                 </Navbar>
                 <Navbar className='nav-underline' id='MainNav' collapseOnSelect expand='sm' bg='dark' data-bs-theme='dark'>
-                    {/* <div className="container-fluid" > */}
                         <Navbar.Toggle aria-controls="navbarSupportedContent" aria-label="Toggle navigation"/>
                         <Navbar.Collapse id="navbarSupportedContent">
                             <Nav className='me-auto mb-2 mb-lg-0'>
@@ -54,13 +53,12 @@ export default function App() {
                             </Nav>
                         </Navbar.Collapse>
                     <Button as={Link} to='/login' variant='outline-primary' className='my-2 my-sm-0 d-flex'>Login/Account</Button>
-                    {/* </div> */}
                 </Navbar>
 
                 
             </header>
         </div>
-        <div id="main-container">
+        <div id="main-container" className='bg-secondary'>
             <Routes>
                 <Route path='/' element={<Landing />} exact />
                 <Route path='/account' element={<Account />} />

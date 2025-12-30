@@ -1,118 +1,102 @@
-import React from "react";
+import React, { useState } from "react";
+import { Button, Stack, Form, ButtonGroup} from "react-bootstrap";
+import './chat.css';
+
+let currentUser = 'me';
+let messageList = [
+    {sender: 'John Cena', content: 'All of the stuff!!', receiver: 'me'},
+    {sender: 'me', content: 'Alll offf theee stuffff\nand some more\nand some moreee', receiver: 'John Cena'}
+];
+let friendList = [
+    {name: 'Billy Bob Sue', online: true},
+    {name: 'John Cena', online: true},
+    {name: 'Leroy Jenkins', online: false},
+    {name: 'Adam Sandler', online: false},
+];
 
 export function Chat() {
+    const [openChat, switchChat] = useState('John Cena');
     return (
         <main className="mx-auto p-4 bg-light">
             <div className="container-md d-flex flex-column gap-3 align-items-center mx-auto">
                 <h1>Your Chats:</h1>
                 <div id="chat-list-and-window" className="d-flex flex-row flex-sm-wrap border rounded w-100">
-                    <div id="chat-list" className="p-0 m-0">
-                        <div className="btn-group-vertical h-100" role="group" aria-label="Vertical button group">
-                            <div className="btn-group dropend flex-fill">
-                                <button type="button" className="btn btn-secondary dropdown-toggle d-flex align-items-center rounded-end-0" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
-                                    <div className="d-inline-flex flex-grow-1 justify-content-between">
-                                        <span className="User Status">Your Status: Online</span>
-                                        <span style={{flex:1}}></span><a href="#">Edit</a>
-                                    </div>
-                                </button>
-                                <ul className="dropdown-menu right-half">
-                                    <li className="dropdown-item">
-                                        Online
-                                    </li>
-                                    <li className="dropdown-item">
-                                        Offline
-                                    </li>
-                                    <li className="dropdown-item">
-                                        Do Not Disturb
-                                    </li>
-                                </ul>
-                            </div>
-                            <div className="btn-group dropend flex-fill">
-                                <button type="button" className="btn btn-secondary dropdown-toggle d-flex justify-content-between align-items-center" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
-                                    <div className="d-inline">
-                                        <span className="Friend Name">Billy Bob Sue</span>: <span className="Status">Online!</span>
-                                    </div>
-                                </button>
-                            </div>
-                            <div className="btn-group dropend flex-fill">
-                                <button type="button" className="btn btn-secondary dropdown-toggle d-flex justify-content-between align-items-center" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
-                                    <div className="d-inline">
-                                            <span className="Friend Name">John Cena</span>: <span className="Status">Online!</span>
-                                    </div>
-                                </button>
-                            </div>
-                            <div className="btn-group dropend flex-fill">
-                                <button type="button" className="btn btn-secondary dropdown-toggle d-flex justify-content-between align-items-center" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
-                                    <div className="d-inline">
-                                        <span className="Friend Name">Leroy Jenkins</span>: <span className="Status">Offline</span>
-                                    </div>
-                                </button>
-                            </div>
-                            <div className="btn-group dropend flex-fill">
-                                <button type="button" className="btn btn-secondary dropdown-toggle d-flex justify-content-between align-items-center rounded-end-0" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
-                                    <div className="d-inline">
-                                        <span className="Friend Name">Adam Sandler</span>: <span className="Status">Offline</span>
-                                    </div>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
+                    <FriendList friends={friendList} />
                     <div className="vr"></div>
-                    <div id="chat-view" className="flex-grow-1 border-start-0 rounded-3">
-                        <div className="chat-bubble">
-                            <div className="chat-tip-container cm-other">
-                                {/* <!--div className="curve"></div--> */}
-                            </div>
-                            <div className="chat-message cm-other">
-                                Alll offf theee stuffff<br/>
-                            </div>
-                        </div>
-                        
-                        <div className="chat-bubble cm-self">
-                            <div className="chat-tip-container cm-self"></div>
-                            <div className="chat-message cm-self">Alll offf theee stuffff<br/>and some more<br/>and some moreeeeeeeeee</div>
-                        </div>
-                        
-                        <hr/>
-                        <form method="get" action="#" className="d-flex mb-1">
-                            <input type="text" id="jCode" placeholder="type your message here" className="flex-grow-1 border rounded-5 px-3 m-1" required/>
-                            <button type="submit" className="btn btn-primary rounded-circle m-1 ">Up</button>
-                        </form>
-                    </div>
+                    <ChatView messages={messageList} />
                 </div>
-                <button type="button d-block my-2" className="btn btn-primary btn-lg">+New Chat</button>
+                <Button variant='primary' className='d-block my-2 btn-lg'>+New Chat</Button>
             </div>
-            {/* Your Status: Online
-            <ul>
-                <li>
-                    <span className="Friend Name">Billy Bob Sue</span> - <span className="Status">Online!</span>
-                    <p>
-                        Oh cool! I didn't know you read Sanderson's books too!....<br/>
-                        Just Now
-                    </p>
-                </li>
-                <li>
-                    <span className="Friend Name">John Cena</span> - <span className="Status">Online!</span>
-                    <p>
-                        You: Why haven't you responded yet? Is my outfit that bad?<br/>
-                        5 mins ago
-                    </p>
-                </li>
-                <li>
-                    <span className="Friend Name">Leroy Jenkins</span> - <span className="Status">Offline</span>
-                    <p>
-                        You: That was the dumbest idea ever. Why on earth would you....<br/>
-                        1 week ago
-                    </p>
-                </li>
-                <li>
-                    <span className="Friend Name">Adam Sandler</span> - <span className="Status">Offline</span>
-                    <p>
-                        I'm probably not going to be on here for a while.<br/>
-                        2 months ago
-                    </p>
-                </li>
-            </ul> */}
         </main>
+    );
+}
+
+function ChatView({messages}){
+    let i=0;
+    let rendered = messages.map( messageI => <ChatMessage message={messageI} key={i++}/> );
+    return (
+        <div id='chat-view' className='flex-grow-1 border-start-0 rounded-3'>
+            {rendered}
+            <hr/>
+            <Form method="get" action="#" className="d-flex my-1">
+                <Form.Control type='text' id='newMessage' placeholder='Type your message here' className="flex-grow-1 border rounded-5 px-3 mx-1 text-wrap" required/>
+                <Button type='submit' variant='primary' className='rounded-circle m-1'>Up</Button>
+            </Form>
+        </div>
+    )
+}
+
+function ChatMessage({message}){
+    let origin_class = 'cm-self';
+    if(message.sender != currentUser){
+        origin_class = 'cm-other';
+    }
+    let i=0;
+    let lines = message.content.split('\n').map(line => 
+        <span key = {i++}>
+            {line}<br />
+        </span>
+    );
+    return(
+        <div className={"chat-bubble " + origin_class}>
+            <div className={"chat-tip-container " + origin_class}/>
+            <div className={"chat-message " + origin_class}>
+                {lines}
+            </div>
+        </div>
+    )
+}
+
+function FriendList({friends}){
+    let friendEntries = friends.map(friend => 
+        <div className="btn-group dropend flex-fill" key={friend.name}>
+            <Button variant='secondary' className='dropdown-toggle d-flex justify-content-between align-items-center gap-3'>
+                <Stack direction='horizontal' className='w-100' gap={3}>
+                    <div className="Friend Name">{friend.name}: </div><div className="ms-auto Status">{friend.online ? 'Online' : 'Offline'}</div>
+                </Stack>
+            </Button>
+        </div>
+    )
+    return( 
+        <div id="chat-list" className="p-0 m-0">
+            <ButtonGroup className='h-100' vertical>
+                <SelfButton/>
+                {friendEntries}
+            </ButtonGroup>
+        </div>
+    );
+}
+
+function SelfButton(){
+    return (
+        <Form as={ButtonGroup} className='flex-fill d-flex'>
+            <Button variant='secondary' className='btn-disabled'>Your Status: </Button>
+            <div className='d-inline flex-fill bg-secondary'/>
+            <Form.Select id='currentStatus' className="rounded-0 bg-secondary text-light border-0 ms-auto" style={{width:'6rem'}}>
+                <option value='online'>Online</option>
+                <option value='offline'>Offline</option>
+                <option value='do-not-disturb'>Do Not Disturb</option>
+            </Form.Select>
+        </Form>
     );
 }
