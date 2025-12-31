@@ -63,6 +63,13 @@
     box-sizing:content-box;
     display: inline-block;
 }
-.btn-disabled {
-    pointer-events: none;
+.right-arrow {
+    display: inline-block;
+    margin-left: .255em;
+    vertical-align: 0;
+    content: "";
+    border-top: .3em solid transparent;
+    border-right: 0;
+    border-bottom: .3em solid transparent;
+    border-left: .3em solid;
 }

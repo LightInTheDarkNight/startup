@@ -1,4 +1,5 @@
 import React from "react";
+import { Stack, ButtonGroup, Form, Button } from "react-bootstrap";
 
 export function Friends() {
     return (
@@ -104,5 +105,35 @@ export function Friends() {
             </div>
             
         </main>
+    );
+}
+
+export function FriendList({friends, selectedFriend, selectFriend}){
+    return( 
+        <ButtonGroup id="chat-list" className='p-0 m-0 h-100' vertical>
+            <SelfButton/>
+            {friends.map((friend, idx) => 
+                <Stack as={Button} key={idx} variant='secondary' direction='horizontal' gap={3}
+                  active={friend.name===selectedFriend} onClick={() => selectFriend(friend.name)}>
+                    <div className="friend-name">{friend.name}: </div>
+                    <div className="ms-auto status">{friend.online ? 'Online' : 'Offline'}</div>
+                    <div className='right-arrow' />
+                </Stack>
+            )}
+        </ButtonGroup>
+    );
+}
+
+function SelfButton(){
+    return (
+        <Form as={ButtonGroup} className='flex-fill d-flex bg-secondary'>
+            <Button variant='secondary' className='btn-disabled'>Your Status: </Button>
+            <div className='d-inline flex-fill'/>
+            <Form.Select id='currentStatus' className="btn btn-secondary rounded-start-0 rounded-bottom-0 text-light text-start border-0 ms-auto ps-3" style={{width:'6rem'}}>
+                <option value='online'>Online</option>
+                <option value='offline'>Offline</option>
+                <option value='do-not-disturb'>Do Not Disturb</option>
+            </Form.Select>
+        </Form>
     );
 }

@@ -39,6 +39,9 @@ footer {
 .right-half{
     width: calc(100% - 2px);
 }
+.btn-disabled {
+    pointer-events: none;
+}
 
 
 

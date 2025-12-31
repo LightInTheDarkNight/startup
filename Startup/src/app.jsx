@@ -2,15 +2,15 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 // import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import './app.css';
-import { BrowserRouter, NavLink, Route, Routes, Link } from 'react-router-dom';
+import { BrowserRouter, NavLink, Route, Routes, Link, useMatch } from 'react-router-dom';
 import { Account } from './account/account';
-import { Chat } from './chat/chat';
-import { Friends } from './friends/friends';
+import { Chat } from './community/chat/chat';
+import { Friends } from './community/friends/friends';
 import { Landing } from './landing/landing';
-import { Leaderboards } from './leaderboards/leaderboards';
+import { Leaderboards } from './community/leaderboards/leaderboards';
 import { Login } from './login/login';
 import { Play } from './play/play';
-import { Button, Nav, Navbar, NavDropdown, Placeholder } from 'react-bootstrap';
+import { Button, Nav, Navbar, NavDropdown, } from 'react-bootstrap';
 // import {Navbar} from 'react-bootstrap/Navbar';
 
 export default function App() {
@@ -18,53 +18,17 @@ export default function App() {
     <BrowserRouter>
     <div className="body m-0">
         <div className="sticky-top m-0 p-0" >
-            <header>
-                <Navbar variant='dark' bg='dark' className="p-0 position-relative bg-dark" >
-                    <div className="container-fluid p-0" style={{height:'66px'}}>
-                        <img src="/Banner_Option_Preview.jpeg" className="object-fit-lg-cover object-fit-none border-dark position-absolute" alt="Dungeon Doors" style={{height:'100%', width:'100%', filter:'brightness(50%)', zIndex: 2}} />
-                        <Navbar.Brand className="m-0 stretched-link" as={NavLink} to='/' style={{padding:'0.5rem 1rem', zIndex: 8}}>Delvers Domain</Navbar.Brand>
-                    </div>
-                </Navbar>
-                <Navbar className='nav-underline' id='MainNav' collapseOnSelect expand='sm' bg='dark' data-bs-theme='dark'>
-                        <Navbar.Toggle aria-controls="navbarSupportedContent" aria-label="Toggle navigation"/>
-                        <Navbar.Collapse id="navbarSupportedContent">
-                            <Nav className='me-auto mb-2 mb-lg-0'>
-                                <Nav.Link as={NavLink} to='/' end aria-current='page'>
-                                    Home
-                                </Nav.Link>
-                                <Nav.Link as={NavLink} to='/play'>
-                                    Play
-                                </Nav.Link>
-                                <NavDropdown title='Community ' aria-expanded='false'>
-                                    <NavDropdown.Item as={NavLink} to='/leaderboards'>
-                                            Leaderboards
-                                    </NavDropdown.Item>
-                                    <NavDropdown.ItemText>
-                                        Social:
-                                    </NavDropdown.ItemText>
-                                    <NavDropdown.Divider />
-                                    <NavDropdown.Item as={NavLink} to='/friends'>
-                                        <Placeholder className='invisible' xs={1} />Friends
-                                    </NavDropdown.Item>
-                                    <NavDropdown.Item as={NavLink} to='/chat'>
-                                        <Placeholder className='invisible' xs={1} />Chat
-                                    </NavDropdown.Item>
-                                </NavDropdown>
-                            </Nav>
-                        </Navbar.Collapse>
-                    <Button as={Link} to='/login' variant='outline-primary' className='my-2 my-sm-0 d-flex'>Login/Account</Button>
-                </Navbar>
-
-                
-            </header>
+            <NavHeader />
         </div>
         <div id="main-container" className='bg-secondary'>
             <Routes>
                 <Route path='/' element={<Landing />} exact />
                 <Route path='/account' element={<Account />} />
-                <Route path='/chat' element={<Chat />} />
-                <Route path='/friends' element={<Friends />} />
-                <Route path='/leaderboards' element={<Leaderboards />} />
+                <Route path='/community/'>
+                    <Route path='chat' element={<Chat />} />
+                    <Route path='friends' element={<Friends />} />
+                    <Route path='leaderboards' element={<Leaderboards />} />
+                </Route>
                 <Route path='/login' element={<Login />} />
                 <Route path='/play' element={<Play />} />
             </Routes>
@@ -85,7 +49,44 @@ export default function App() {
   );
 }
 
-// function NavHeader() {
-//     return(
-//     );
-// }
+function NavHeader() {
+    const match = useMatch('/community/*');
+    return(
+        <header>
+            <Navbar variant='dark' bg='dark' className="p-0 position-relative bg-dark" >
+                <div className="container-fluid p-0" style={{height:'66px'}}>
+                    <img src="/Banner_Option_Preview.jpeg" className="object-fit-lg-cover object-fit-none border-dark position-absolute" alt="Dungeon Doors" style={{height:'100%', width:'100%', filter:'brightness(50%)', zIndex: 2}} />
+                    <Navbar.Brand className="m-0 stretched-link" as={NavLink} to='/' style={{padding:'0.5rem 1rem', zIndex: 8}}>Delvers Domain</Navbar.Brand>
+                </div>
+            </Navbar>
+            <Navbar className='nav-underline' id='MainNav' collapseOnSelect expand='sm' bg='dark' data-bs-theme='dark'>
+                    <Navbar.Toggle aria-controls="navbarSupportedContent" aria-label="Toggle navigation"/>
+                    <Navbar.Collapse id="navbarSupportedContent">
+                        <Nav className='me-auto mb-2 mb-lg-0'>
+                            <Nav.Link as={NavLink} to='/' end aria-current='page'>
+                                Home
+                            </Nav.Link>
+                            <Nav.Link as={NavLink} to='/play'>
+                                Play
+                            </Nav.Link>
+                            <NavDropdown title='Community' aria-expanded='false' active={!!match}>
+                                <NavDropdown.Item as={NavLink} to='/community/leaderboards'>
+                                        Leaderboards
+                                </NavDropdown.Item>
+                                <NavDropdown.ItemText>
+                                    Social:
+                                </NavDropdown.ItemText>
+                                <NavDropdown.Item as={NavLink} to='/community/chat' className='ps-4'>
+                                    Chat
+                                </NavDropdown.Item>
+                                <NavDropdown.Item as={NavLink} to='/community/friends' className='ps-4'>
+                                    Friends
+                                </NavDropdown.Item>
+                            </NavDropdown>
+                        </Nav>
+                    </Navbar.Collapse>
+                <Button as={Link} to='/login' variant='outline-primary' className='my-2 my-sm-0 d-flex'>Login/Account</Button>
+            </Navbar>
+        </header>
+    );
+}
