@@ -52,12 +52,9 @@ export default function App() {
 function NavHeader() {
     const match = useMatch('/community/*');
     return(
-        <header>
-            <Navbar variant='dark' bg='dark' className="p-0 position-relative bg-dark" >
-                <div className="container-fluid p-0" style={{height:'66px'}}>
-                    <img src="/Banner_Option_Preview.jpeg" className="object-fit-lg-cover object-fit-none border-dark position-absolute" alt="Dungeon Doors" style={{height:'100%', width:'100%', filter:'brightness(50%)', zIndex: 2}} />
-                    <Navbar.Brand className="m-0 stretched-link" as={NavLink} to='/' style={{padding:'0.5rem 1rem', zIndex: 8}}>Delvers Domain</Navbar.Brand>
-                </div>
+        <header className="bg-dark">
+            <Navbar variant='dark' className="p-0" >
+                    <Navbar.Brand className="m-0 p-3 stretched-link" as={NavLink} to='/' style={{ width:'100%', backgroundImage:"linear-gradient(rgb(0 0 0 / 0.6)), url('/Banner_Option_Preview.jpeg')", backgroundPosition: 'center'}}>Delvers Domain</Navbar.Brand>
             </Navbar>
             <Navbar className='nav-underline' id='MainNav' collapseOnSelect expand='sm' bg='dark' data-bs-theme='dark'>
                     <Navbar.Toggle aria-controls="navbarSupportedContent" aria-label="Toggle navigation"/>

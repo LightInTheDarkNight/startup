@@ -51,14 +51,12 @@ export function Play() {
                             </InputGroup>
                         </Form>
                         <p>Or</p>
-                        <Form method='get' action='/play' className='mb-1'>
-                            <InputGroup>
-                                <FloatingLabel label='Watch a Game:' controlId='watchID'>
-                                    <Form.Control type='text' placeholder='watchCode' name='gameID' required/>
-                                </FloatingLabel>
-                                <Button type='submit' name='doWhat' value='watch'>Go</Button>
-                            </InputGroup>
-                        </Form>
+                        <InputGroup as={Form} method='get' action='/play' className='mb-1 w-auto'>
+                            <FloatingLabel label='Watch a Game:' controlId='watchID'>
+                                <Form.Control type='text' placeholder='watchCode' name='gameID' required/>
+                            </FloatingLabel>
+                            <Button type='submit' name='doWhat' value='watch'>Go</Button>
+                        </InputGroup>
                         <span>Or</span>
                         <p>Start a new game:</p>
                         <Form method="get" className="text-center" action="/play">
