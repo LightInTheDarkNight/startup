@@ -1,21 +1,20 @@
 #!/bin/bash
 
-while getopts k:h:s: flag
+while getopts h:s: flag
 do
     case "${flag}" in
-        k) key=${OPTARG};;
         h) hostname=${OPTARG};;
         s) service=${OPTARG};;
     esac
 done
 
-if [[ -z "$key" || -z "$hostname" || -z "$service" ]]; then
+if [[ -z "$hostname" || -z "$service" ]]; then
     printf "\nMissing required parameter.\n"
-    printf "  syntax: deployReact.sh -k <pem key file> -h <hostname> -s <service>\n\n"
+    printf "  syntax: deployReact.sh -h <hostname> -s <service>\n\n"
     exit 1
 fi
 
-printf "\n----> Deploying React bundle $service to $hostname with $key\n"
+printf "\n----> Deploying React bundle $service to $hostname\n"
 
 # Step 1
 printf "\n----> Build the distribution package\n"
